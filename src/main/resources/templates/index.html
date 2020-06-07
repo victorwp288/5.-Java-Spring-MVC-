@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
+<div>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <th>Navn</th>
+        <th>Farve</th>
+        <th>Alder</th>
+        <th>Liv tilbage</th>
+        </thead>
+        <tbody>
+        <tr th:each="cat : ${cats}">
+            <td><span th:text="${cat.name}"> navn </span></td>
+            <td><span th:text="${cat.color}"> farve </span></td>
+            <td><span th:text="${cat.age}"> alder </span></td>
+            <td><span th:text="${cat.numberOfLifeLeft}"> liv tilbage </span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
