@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class CatService {
 
-    List cats = new ArrayList<>();
+    List<Cat> cats = new ArrayList<>();
 
     public CatService() {
         cats.add(new Cat("Tom", "Blå", 12, 9, 1));
@@ -30,8 +30,8 @@ public class CatService {
 
     }
 
-    public void createCat(String name, String color, int age, int numberOfLifesLeft){
-
+    public void createCat(Cat cat){
+        cats.add(cat);
     }
 
     public void giveLife(int catId){
